@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Prop_Tree_Palm_3.obj-e1c67f2fcdaa0c8558dd206e032f6f11.mesh"
+
+[deps]
+
+files=[ "res://.import/Prop_Tree_Palm_3.obj-e1c67f2fcdaa0c8558dd206e032f6f11.mesh" ]
+
+source_file="res://assets/terrain/Prop_Tree_Palm_3.obj"
+dest_files=[ "res://.import/Prop_Tree_Palm_3.obj-e1c67f2fcdaa0c8558dd206e032f6f11.mesh", "res://.import/Prop_Tree_Palm_3.obj-e1c67f2fcdaa0c8558dd206e032f6f11.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

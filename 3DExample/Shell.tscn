@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/Ammo/ammo_sniper.obj" type="PackedScene" id=1]
+[ext_resource path="res://3DExample/Shell.gd" type="Script" id=2]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 0.0847164
+height = 0.437412
+
+[node name="Shell" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="MeshInstance" parent="." index="0"]
+transform = Transform( 25, 0, 0, 0, -1.09278e-06, 25, 0, -25, -1.09278e-06, 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="." index="1"]
+visible = false
+shape = SubResource( 1 )
+[connection signal="body_entered" from="." to="." method="_on_Shell_body_entered"]

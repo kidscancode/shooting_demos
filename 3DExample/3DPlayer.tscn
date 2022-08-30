@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://3DExample/3DPlayer.gd" type="Script" id=1]
+
+[sub_resource type="CapsuleMesh" id=1]
+radius = 0.25
+
+[sub_resource type="CapsuleShape" id=2]
+radius = 0.25
+
+[sub_resource type="CubeMesh" id=3]
+size = Vector3( 0.1, 0.1, 1 )
+
+[node name="3DPlayer" type="KinematicBody"]
+script = ExtResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0 )
+shape = SubResource( 2 )
+
+[node name="Pivot" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.994121, 0.108277, 0, -0.108277, 0.994121, 0, 0, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Pivot"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.318723, 0, -0.363816 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="Position3D" type="Position3D" parent="Pivot/MeshInstance"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.608784 )
+
+[node name="CamPosition" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.869805, 0.493395, 0, -0.493395, 0.869805, 0, 1.93289, 1.9193 )
